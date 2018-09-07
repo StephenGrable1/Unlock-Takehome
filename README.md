@@ -5,6 +5,9 @@
 2. Navigate to the folder holding the files and run <code>npm install</code>
 3. Then run <code>npm start</code> and the app should open up on localhost:3000
 
+# How to Test
+1. Once you've finished the tasks above you can run <code>npm test</code> to run the test suite
+
 
 # Spec
 As a final exercise, we'd like to ask you to work on a take home exercise. 
