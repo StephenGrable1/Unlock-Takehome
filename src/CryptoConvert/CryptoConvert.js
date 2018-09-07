@@ -1,5 +1,7 @@
 import React from 'react';
 import numeral from 'numeral';
+import fetch from 'isomorphic-fetch'
+
 
 import './CryptoConvert.scss';
 import swap from './media/swap-icon.png'
@@ -147,7 +149,7 @@ class CryptoConvert extends React.Component {
 
         var renderFiatSelect = (type) => {
             return (
-                <select onChange={this.selectFiat} value={this.state.conversion[type]}>
+                <select className="select-fiat" onChange={this.selectFiat} value={this.state.conversion[type]}>
                     {renderFiatOptions(type)}
                 </select>
             );
@@ -155,10 +157,7 @@ class CryptoConvert extends React.Component {
 
         var renderFiatOptions = (type) => {
             let options = [];
-            console.log('running fiat options outside: ', this.state.currencies.length)
-
             for (let key in this.state.currencies) {
-                console.log('running fiat options: ')
                 options.push(<option key={key} value={key}>{key}</option>)
             }
             return (options);
@@ -171,7 +170,7 @@ class CryptoConvert extends React.Component {
                 <div className="conversion-container">
                     <div className="from-container">
                         <div className="from-title">From: {this.state.conversion.from !== 'ETH' ? renderFiatSelect('from') : this.state.conversion.from}</div>
-                        <input type="number" value={this.state.inputValue} onChange={this.handleChange} />
+                        <input className="number-input" name="number-conv" type="number" value={this.state.inputValue} onChange={this.handleChange} />
                     </div>
 
                     <div className="to-container">
