@@ -1,10 +1,10 @@
-####How to Run
+###How to Run
 1. Clone or download the project to you computer
 2. Navigate to the folder holding the files and run <code>npm install</code>
 3. Then run <code>npm start</code> and the app should open up on localhost:3000
 
 
-####Spec
+###Spec
 As a final exercise, we'd like to ask you to work on a take home exercise. 
 This is to assess your technical skills with some of the key front end 
 technologies that we use. 
