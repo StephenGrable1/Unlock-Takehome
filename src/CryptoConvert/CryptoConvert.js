@@ -150,12 +150,12 @@ class CryptoConvert extends React.Component {
         var renderFiatSelect = (type) => {
             return (
                 <select className="select-fiat" onChange={this.selectFiat} value={this.state.conversion[type]}>
-                    {renderFiatOptions(type)}
+                    {renderFiatOptions()}
                 </select>
             );
         };
 
-        var renderFiatOptions = (type) => {
+        var renderFiatOptions = () => {
             let options = [];
             for (let key in this.state.currencies) {
                 options.push(<option key={key} value={key}>{key}</option>)
